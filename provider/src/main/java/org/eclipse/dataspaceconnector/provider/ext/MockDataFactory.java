@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class MockDataFactory implements DataSinkFactory, DataSourceFactory {
     @Override
     public boolean canHandle(DataFlowRequest dataFlowRequest) {
-        return true;
+        return "file".equalsIgnoreCase(dataFlowRequest.getSourceDataAddress().getType());
     }
 
     @Override
@@ -37,5 +37,10 @@ public class MockDataFactory implements DataSinkFactory, DataSourceFactory {
     @Override
     public DataSink createSink(DataFlowRequest dataFlowRequest) {
         return source -> CompletableFuture.completedFuture(StatusResult.success());
+    }
+
+    @Override
+    public @NotNull Result<Void> validateRequest(DataFlowRequest request) {
+        return Result.success();
     }
 }

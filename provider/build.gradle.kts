@@ -9,7 +9,7 @@ val edcVersion: String by project
 
 dependencies {
     api("${edcGroup}:data-plane-spi:${edcVersion}")
-    api("${edcGroup}:data-plane-transfer-spi:${edcVersion}")
+//    api("${edcGroup}:data-plane-transfer-spi:${edcVersion}")
     api("${edcGroup}:data-plane-selector-spi:${edcVersion}")
     api("${edcGroup}:control-plane-api-client-spi:${edcVersion}")
 
@@ -30,19 +30,23 @@ dependencies {
     implementation("${edcGroup}:data-plane-selector-api:${edcVersion}")
     implementation("${edcGroup}:data-plane-selector-core:${edcVersion}")
     implementation("${edcGroup}:data-plane-api:${edcVersion}")
+    implementation("${edcGroup}:data-plane-http:${edcVersion}")
+
+//    implementation("org.eclipse.tractusx.edc:business-partner-validation:0.3.3-SNAPSHOT")
+
 
 //    implementation("${edcGroup}:control-plane-api:${edcVersion}")
 //    implementation("${edcGroup}:control-plane-api-client:${edcVersion}")
 
-    implementation("org.postgresql:postgresql:42.4.0")
-    implementation("${edcGroup}:sql-pool-apache-commons:${edcVersion}")
-    implementation("${edcGroup}:sql-lease:${edcVersion}")
-    implementation("${edcGroup}:transaction-local:${edcVersion}")
-    implementation("${edcGroup}:asset-index-sql:${edcVersion}")
-    implementation("${edcGroup}:contract-definition-store-sql:${edcVersion}")
-    implementation("${edcGroup}:contract-negotiation-store-sql:${edcVersion}")
-    implementation("${edcGroup}:policy-definition-store-sql:${edcVersion}")
-    implementation("${edcGroup}:transfer-process-store-sql:${edcVersion}")
+//    implementation("org.postgresql:postgresql:42.4.0")
+//    implementation("${edcGroup}:sql-pool-apache-commons:${edcVersion}")
+//    implementation("${edcGroup}:sql-lease:${edcVersion}")
+//    implementation("${edcGroup}:transaction-local:${edcVersion}")
+//    implementation("${edcGroup}:asset-index-sql:${edcVersion}")
+//    implementation("${edcGroup}:contract-definition-store-sql:${edcVersion}")
+//    implementation("${edcGroup}:contract-negotiation-store-sql:${edcVersion}")
+//    implementation("${edcGroup}:policy-definition-store-sql:${edcVersion}")
+//    implementation("${edcGroup}:transfer-process-store-sql:${edcVersion}")
 
 
 
